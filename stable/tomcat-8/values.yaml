@@ -1,0 +1,2 @@
+wzh-name: tomcat-8
+imageRegistry: 10.11.0.4:60080/tomcat:8
