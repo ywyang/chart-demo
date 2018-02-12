@@ -1,0 +1,4 @@
+name: tomcat-6
+version: 1.0.0
+description: Tomcat Version 6
+icon: http://10.11.0.5:9988/root/chart-demo/raw/master/stable/tomcat-8/icon/tomcat.png
