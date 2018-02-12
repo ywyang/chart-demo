@@ -14,8 +14,8 @@ spec:
         image: "{{ .Values.imageRegistry }}"
         ports:
         - containerPort: 9443
-          name: 9443
+          name: web
           protocol: TCP
         - containerPort: 9043
-          name: 9043
+          name: admin
           protocol: TCP
