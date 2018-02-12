@@ -1,2 +1,2 @@
-wzh-name: tomcat-8
-imageRegistry: 10.11.0.4:60080/tomcat:8
+name: tomcat-8
+imageRegistry: 10.11.0.15:5000/tomcat:8
