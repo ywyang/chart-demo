@@ -1,0 +1,2 @@
+name: websphere-liberty
+imageRegistry: 10.11.0.15:5000/websphere-liberty
