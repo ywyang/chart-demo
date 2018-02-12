@@ -1,0 +1,21 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: "{{ .Values.name }}"
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: "{{ .Values.name }}"
+    spec:
+      containers:
+      - name: "{{ .Values.name }}"
+        image: "{{ .Values.imageRegistry }}"
+        ports:
+        - containerPort: 80
+          name: web
+          protocol: TCP
+        env:
+        - name: LICENSE
+          value: accept
