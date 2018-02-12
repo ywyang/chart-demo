@@ -1,17 +1,17 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: "{{ .Values.wzh-name }}"
+  name: tomcat-8
 spec:
   replicas: 1
   template:
     metadata:
       labels:
-        app: "{{ .Values.wzh-name }}"
+        app: tomcat-8
     spec:
       containers:
-      - name: "{{ .Values.wzh-name }}"
-        image: "{{ .Values.imageRegistry }}"
+      - name: tomcat-8
+        image: 10.11.0.4:60080/tomcat:8
         ports:
         - containerPort: 8080
         resources:
