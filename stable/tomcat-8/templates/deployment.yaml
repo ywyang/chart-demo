@@ -14,7 +14,5 @@ spec:
         image: 10.11.0.15:5000/tomcat:8
         ports:
         - containerPort: 8080
-        resources:
-          limits:
-            cpu: 1
-            memory: 2Gi
+          name: http
+          protocol: TCP
