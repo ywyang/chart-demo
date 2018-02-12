@@ -16,3 +16,6 @@ spec:
         - containerPort: 9443
           name: admin
           protocol: TCP
+        env:
+        - name: LICENSE
+          value: accept
