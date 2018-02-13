@@ -20,5 +20,5 @@ spec:
         - name: LICENSE
           value: accept
         - name: DB2INST1_PASSWORD
-          value: db2inst1-pwd
+          value: 2Szr6XUkBu25KCrs
         
