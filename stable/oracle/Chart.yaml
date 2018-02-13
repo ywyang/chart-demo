@@ -1,4 +1,4 @@
-name: oracle
+name: Oracle
 version: 1.0.0
 description: Oracle Database Server 12c R2 is an industry leading relational database server. The Oracle Database Server Docker Image contains the Oracle Database Server 12.2.0.1 Enterprise Edition running on Oracle Linux 7. This image contains a default database in a multitenant configuration with one pdb.
 icon: http://10.11.0.5:9988/root/chart-demo/raw/master/stable/oracle/icon/logo.png
