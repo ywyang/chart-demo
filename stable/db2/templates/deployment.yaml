@@ -12,6 +12,7 @@ spec:
       containers:
       - name: "{{ .Values.name }}"
         image: "{{ .Values.imageRegistry }}"
+        command: ["/entrypoint.sh","db2start"]
         ports:
         - containerPort: 50000
           name: admin
