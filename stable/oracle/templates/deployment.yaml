@@ -19,3 +19,6 @@ spec:
         env:
         - name: LICENSE
           value: accept
+        - name: ORACLE_PWD
+          value: 2Szr6XUkBu25KCrs
+        
