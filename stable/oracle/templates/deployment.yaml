@@ -13,12 +13,11 @@ spec:
       - name: "{{ .Values.name }}"
         image: "{{ .Values.imageRegistry }}"
         ports:
-        - containerPort: 5500
+        - containerPort: 8080
           name: admin
           protocol: TCP
         env:
         - name: LICENSE
           value: accept
-        - name: ORACLE_PWD
-          value: 2Szr6XUkBu25KCrs
+
         
