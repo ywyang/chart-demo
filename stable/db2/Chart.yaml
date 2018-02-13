@@ -1,0 +1,4 @@
+name: db2
+version: 1.0.0
+description: IBM DB2 Express-C is the no-charge community edition of DB2 server, a simple, flexible, powerful, and reliable relational database server. It is easy to install, embed, deploy, and available for download, deployment, and redistribution at no charge
+icon: http://10.11.0.5:9988/root/chart-demo/raw/master/stable/db2/icon/logo.jpeg
