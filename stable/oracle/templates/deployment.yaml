@@ -19,5 +19,3 @@ spec:
         env:
         - name: LICENSE
           value: accept
-
-        
