@@ -1,2 +1,2 @@
 name: oracle
-imageRegistry: 10.11.0.15:5000/oracle:12.2.0.1
+imageRegistry: 10.11.0.15:5000/oracle:12.2.0.1-ee
