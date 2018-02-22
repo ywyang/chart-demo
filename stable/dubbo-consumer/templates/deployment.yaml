@@ -22,5 +22,5 @@ spec:
         - name: ZOOKEEPER_SERVER
           value: dubbo-zookeeper
         - name: SERVER_PORT
-          value: 8899
+          value: "8899"
       
