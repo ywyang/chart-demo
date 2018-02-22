@@ -20,7 +20,7 @@ spec:
         - name: LICENSE
           value: accept
         - name: ZOOKEEPER_SERVER
-          value: "{{ .Values.ZOOKEEPER_SERVER }}"
+          value: dubbo-zookeeper
         - name: SERVER_PORT
           value: 8899
       
