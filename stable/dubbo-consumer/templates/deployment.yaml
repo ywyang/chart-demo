@@ -13,6 +13,14 @@ spec:
       - name: "{{ .Values.name }}"
         image: "{{ .Values.imageRegistry }}"
         ports:
-        - containerPort: 8080
-          name: http
+        - containerPort: 8899
+          name: admin
           protocol: TCP
+        env:
+        - name: LICENSE
+          value: accept
+        - name: ZOOKEEPER_SERVER
+          value: "{{ .Values.ZOOKEEPER_SERVER }}"
+        - name: SERVER_PORT
+          value: 8899
+      
