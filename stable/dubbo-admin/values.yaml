@@ -1,2 +1,2 @@
-name: dubbo-consumer
+name: dubbo-admin
 imageRegistry: 10.11.0.15:5000/dubbo:admin
