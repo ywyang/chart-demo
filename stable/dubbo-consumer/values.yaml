@@ -1,2 +1,0 @@
-name: dubbo-consumer
-imageRegistry: 10.11.0.15:5000/dubbo:consumer
