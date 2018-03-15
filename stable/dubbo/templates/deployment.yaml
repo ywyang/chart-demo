@@ -1,0 +1,71 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: "{{ .Values.name }}-zookeeper"
+  labels:
+    app: "{{ .Values.name }}-zookeeper"
+spec:
+  ports:
+    - port: 2181
+      targetPort: 2181
+  selector:
+    app: "{{ .Values.name }}-zookeeper"
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: "{{ .Values.name }}"
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: "{{ .Values.name }}"
+    spec:
+      containers:
+      - name: "{{ .Values.name }}-admin"
+        image: "{{ .Values.imageRegistry }}/dubbo:admin"
+        ports:
+        - containerPort: 80
+          name: admin
+          protocol: TCP
+        env:
+        - name: LICENSE
+          value: accept
+        - name: ZOOKEEPER_SERVER
+          value: dubbo-zookeeper
+        - name: SERVER_PORT
+          value: "8899"
+      - name: "{{ .Values.name }}-zookeeper"
+        image: "{{ .Values.imageRegistry }}/dubbo:zookeeper"
+        ports:
+        - containerPort: 2181
+          name: admin
+          protocol: TCP
+        env:
+        - name: LICENSE
+          value: accept
+      - name: "{{ .Values.name }}-producer"
+        image: "{{ .Values.imageRegistry }}/dubbo:producer"
+        ports:
+        - containerPort: 20880
+          name: admin
+          protocol: TCP
+        env:
+        - name: LICENSE
+          value: accept
+        - name: ZOOKEEPER_SERVER
+          value: dubbo-zookeeper
+      - name: "{{ .Values.name }}-consumer"
+        image: "{{ .Values.imageRegistry }}/dubbo:consumer"
+        ports:
+        - containerPort: 8899
+          name: admin
+          protocol: TCP
+        env:
+        - name: LICENSE
+          value: accept
+        - name: ZOOKEEPER_SERVER
+          value: dubbo-zookeeper
+        - name: SERVER_PORT
+          value: "8899"
