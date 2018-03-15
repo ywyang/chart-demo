@@ -1,2 +1,6 @@
 name: dubbo
-imageRegistry: 10.11.0.15:5000
+imageRegistry-admin: 10.11.0.15:5000/dubbo:admin
+imageRegistry-zookeeper: 10.11.0.15:5000/dubbo:zookeeper
+imageRegistry-producer: 10.11.0.15:5000/dubbo:producer
+imageRegistry-consumer: 10.11.0.15:5000/dubbo:consumer
+
