@@ -20,13 +20,11 @@ spec:
   template:
     metadata:
       labels:
-        app: "{{ .Values.name }}"
+        app: "{{ .Values.name }}-zookeeper"
     spec:
       containers:
       - name: "{{ .Values.name }}-zookeeper"
         image: "{{ .Values.imageRegistry-zookeeper }}"
-        labels:
-          app: "{{ .Values.name }}-zookeeper"
         ports:
         - containerPort: 2181
           name: admin
@@ -34,6 +32,19 @@ spec:
         env:
         - name: LICENSE
           value: accept
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: "{{ .Values.name }}"
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: "{{ .Values.name }}"
+    spec:
+      containers:
       - name: "{{ .Values.name }}-admin"
         image: "{{ .Values.imageRegistry-admin }}"
         ports:
