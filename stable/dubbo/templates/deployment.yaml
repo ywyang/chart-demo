@@ -24,7 +24,7 @@ spec:
     spec:
       containers:
       - name: "{{ .Values.name }}-zookeeper"
-        image: "{{ .Values.imageRegistry-zookeeper }}"
+        image: "{{ .Values.imageRegistry_zookeeper }}"
         ports:
         - containerPort: 2181
           name: admin
@@ -46,7 +46,7 @@ spec:
     spec:
       containers:
       - name: "{{ .Values.name }}-admin"
-        image: "{{ .Values.imageRegistry-admin }}"
+        image: "{{ .Values.imageRegistry_admin }}"
         ports:
         - containerPort: 80
           name: admin
@@ -59,7 +59,7 @@ spec:
         - name: SERVER_PORT
           value: "8899"
       - name: "{{ .Values.name }}-producer"
-        image: "{{ .Values.imageRegistry-producer }}"
+        image: "{{ .Values.imageRegistry_producer }}"
         ports:
         - containerPort: 20880
           name: admin
@@ -70,7 +70,7 @@ spec:
         - name: ZOOKEEPER_SERVER
           value: dubbo-zookeeper
       - name: "{{ .Values.name }}-consumer"
-        image: "{{ .Values.imageRegistry-consumer }}"
+        image: "{{ .Values.imageRegistry_consumer }}"
         ports:
         - containerPort: 18899
           name: admin
