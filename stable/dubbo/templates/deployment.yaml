@@ -36,13 +36,13 @@ spec:
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: "{{ .Values.name }}"
+  name: "{{ .Values.name }}-admin"
 spec:
   replicas: 1
   template:
     metadata:
       labels:
-        app: "{{ .Values.name }}"
+        app: "{{ .Values.name }}-admin"
     spec:
       containers:
       - name: "{{ .Values.name }}-admin"
@@ -58,6 +58,19 @@ spec:
           value: dubbo-zookeeper
         - name: SERVER_PORT
           value: "8899"
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: "{{ .Values.name }}-producer"
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: "{{ .Values.name }}-producer"
+    spec:
+      containers:
       - name: "{{ .Values.name }}-producer"
         image: "{{ .Values.imageRegistry_producer }}"
         ports:
@@ -69,10 +82,23 @@ spec:
           value: accept
         - name: ZOOKEEPER_SERVER
           value: dubbo-zookeeper
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: "{{ .Values.name }}-consumer"
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: "{{ .Values.name }}-consumer"
+    spec:
+      containers:
       - name: "{{ .Values.name }}-consumer"
         image: "{{ .Values.imageRegistry_consumer }}"
         ports:
-        - containerPort: 18899
+        - containerPort: 8899
           name: admin
           protocol: TCP
         env:
