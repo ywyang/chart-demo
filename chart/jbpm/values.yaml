@@ -1,0 +1,2 @@
+name: jbpm
+imageRegistry: 10.11.0.6:5000/jbpm-workbench-showcase

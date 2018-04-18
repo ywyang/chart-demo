@@ -1,0 +1,2 @@
+name: db2
+imageRegistry: 10.11.0.6:5000/db2express-c

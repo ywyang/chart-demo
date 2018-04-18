@@ -1,0 +1,6 @@
+name: dubbo
+imageRegistry_admin: 10.11.0.6:5000/dubbo:admin
+imageRegistry_zookeeper: 10.11.0.6:5000/dubbo:zookeeper
+imageRegistry_producer: 10.11.0.6:5000/dubbo:producer
+imageRegistry_consumer: 10.11.0.6:5000/dubbo:consumer
+

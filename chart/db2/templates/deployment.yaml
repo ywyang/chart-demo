@@ -1,0 +1,25 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: "{{ .Values.name }}"
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: "{{ .Values.name }}"
+    spec:
+      containers:
+      - name: "{{ .Values.name }}"
+        image: "{{ .Values.imageRegistry }}"
+        command: ["/entrypoint.sh","db2start"]
+        ports:
+        - containerPort: 50000
+          name: admin
+          protocol: TCP
+        env:
+        - name: LICENSE
+          value: accept
+        - name: DB2INST1_PASSWORD
+          value: 2Szr6XUkBu25KCrs
+        

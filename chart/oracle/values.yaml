@@ -1,0 +1,2 @@
+name: oracle
+imageRegistry: 10.11.0.6:5000/oracle:11g-xe

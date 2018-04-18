@@ -1,0 +1,2 @@
+name: tomcat-7
+imageRegistry: 10.11.0.6:5000/tomcat:7

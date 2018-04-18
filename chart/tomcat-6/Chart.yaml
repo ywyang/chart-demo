@@ -1,0 +1,4 @@
+name: Tomcat 6
+version: 1.0.0
+description: Apache Tomcat is an open source implementation of the Java Servlet and JavaServer Pages technologies
+icon: http://10.11.0.5:9988/root/chart-demo/raw/master/stable/tomcat-6/icon/tomcat.png

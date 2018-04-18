@@ -1,0 +1,4 @@
+name: WebSphere-Liberty
+version: 1.0.0
+description: Official IBM WebSphere Application Server for Developers Liberty image.
+icon: http://10.11.0.5:9988/root/chart-demo/raw/master/stable/websphere-liberty/icon/images.jpeg
