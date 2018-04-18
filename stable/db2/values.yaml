@@ -1,2 +1,2 @@
 name: db2
-imageRegistry: 10.11.0.15:5000/db2express-c
+imageRegistry: {{REGISTRY}}/db2express-c

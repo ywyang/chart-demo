@@ -1,2 +1,2 @@
 name: tomcat-6
-imageRegistry: 10.11.0.15:5000/tomcat:6
+imageRegistry: {{REGISTRY}}/tomcat:6

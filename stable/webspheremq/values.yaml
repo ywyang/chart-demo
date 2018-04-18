@@ -1,2 +1,2 @@
 name: webspheremq
-imageRegistry: 10.11.0.15:5000/ibmcom-mq
+imageRegistry: {{REGISTRY}}/ibmcom-mq

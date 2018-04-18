@@ -1,4 +1,4 @@
 name: Drools
 version: 1.0.0
 description: Drools Workbench Showcase
-icon: http://10.11.0.5:9988/root/chart-demo/raw/master/stable/drools/icon/logo.png
+icon: http://{{GIT_HOST}}/root/chart-demo/raw/master/stable/drools/icon/logo.png

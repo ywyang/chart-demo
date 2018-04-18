@@ -1,2 +1,2 @@
 name: oracle
-imageRegistry: 10.11.0.15:5000/oracle:11g-xe
+imageRegistry: {{REGISTRY}}/oracle:11g-xe

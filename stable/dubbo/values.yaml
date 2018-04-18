@@ -1,6 +1,6 @@
 name: dubbo
-imageRegistry_admin: 10.11.0.15:5000/dubbo:admin
-imageRegistry_zookeeper: 10.11.0.15:5000/dubbo:zookeeper
-imageRegistry_producer: 10.11.0.15:5000/dubbo:producer
-imageRegistry_consumer: 10.11.0.15:5000/dubbo:consumer
+imageRegistry_admin: {{REGISTRY}}/dubbo:admin
+imageRegistry_zookeeper: {{REGISTRY}}/dubbo:zookeeper
+imageRegistry_producer: {{REGISTRY}}/dubbo:producer
+imageRegistry_consumer: {{REGISTRY}}/dubbo:consumer
 

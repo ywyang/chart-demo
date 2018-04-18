@@ -1,2 +1,2 @@
 name: websphere
-imageRegistry: 10.11.0.15:5000/ibmcom-websphere-traditional
+imageRegistry: {{REGISTRY}}/ibmcom-websphere-traditional
