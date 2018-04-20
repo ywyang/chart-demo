@@ -47,6 +47,7 @@ spec:
       containers:
       - name: "{{ .Values.name }}-admin"
         image: "{{ .Values.imageRegistry_admin }}"
+        imagePullPolicy: Always
         ports:
         - containerPort: 80
           name: admin
