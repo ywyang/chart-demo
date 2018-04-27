@@ -68,8 +68,8 @@ spec:
         env:
         - name: LICENSE
           value: accept
-        - name: dubbo.registry.address
-          value: {{ .Values.name }}-zookeeper:2181
+        - name: ZOOKEEPER_SERVER
+          value: {{ .Values.name }}-zookeeper
         - name: SERVER_PORT
           value: "8899"
 ---
