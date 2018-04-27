@@ -44,7 +44,7 @@ spec:
     - port: 8080
       targetPort: 8080
   selector:
-    app: "{{ .Values.name }}-zookeeper"
+    app: "{{ .Values.name }}-admin"
 ---
 apiVersion: extensions/v1beta1
 kind: Deployment
