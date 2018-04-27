@@ -33,6 +33,19 @@ spec:
         - name: LICENSE
           value: accept
 ---
+apiVersion: v1
+kind: Service
+metadata:
+  name: "{{ .Values.name }}-admin"
+  labels:
+    app: "{{ .Values.name }}-admin"
+spec:
+  ports:
+    - port: 8080
+      targetPort: 8080
+  selector:
+    app: "{{ .Values.name }}-zookeeper"
+---
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
