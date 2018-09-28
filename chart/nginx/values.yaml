@@ -1,2 +1,2 @@
 name: nginx
-imageRegistry: 10.11.0.6:5000/nginx
+imageRegistry: 192.168.24.231:5000/nginx:latest
